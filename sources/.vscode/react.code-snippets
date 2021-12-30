@@ -1,0 +1,84 @@
+{
+  "memo-component": {
+    "prefix": "memo-component",
+    "scope": "typescriptreact",
+    "body": [
+      "import { memo } from 'react';",
+      "",
+      "import { ${1:Name}Styles } from './.style';",
+      "import { ${1:Name}Component } from './.type';",
+      "",
+      "const styles = ${1:Name}Styles;",
+      "",
+      "const ${1:Name}: ${1:Name}Component = memo(function () {",
+      "  return <>$0</>;",
+      "});",
+      "",
+      "export { ${1:Name} };",
+      ""
+    ]
+  },
+
+  "component": {
+    "prefix": "component",
+    "scope": "typescriptreact",
+    "body": [
+      "import { memo } from 'react';",
+      "",
+      "import { ${1:Name}Styles } from './.style';",
+      "import { ${1:Name}Component } from './.type';",
+      "",
+      "const styles = ${1:Name}Styles;",
+      "",
+      "const ${1:Name}: ${1:Name}Component = function () {",
+      "  return <>$0</>;",
+      "};",
+      "",
+      "export { ${1:Name} };",
+      ""
+    ]
+  },
+
+  "style-component": {
+    "prefix": "style-component",
+    "scope": "typescript",
+    "body": [
+      "import { StyleSheet } from 'react-native';",
+      "",
+      "const ${1:Name}Styles = StyleSheet.create({$0});",
+      "",
+      "export { ${1:Name}Styles };",
+      "",
+      ""
+    ]
+  },
+
+  "memo-type-component": {
+    "prefix": "memo-type-component",
+    "scope": "typescript",
+    "body": [
+      "import { ExoticComponent, PropsWithoutRef } from 'react';",
+      "",
+      "type ${1:Name}Props = PropsWithoutRef<{}>;",
+      "",
+      "type ${1:Name}Component = ExoticComponent<${1:Name}Props>;",
+      "",
+      "export { ${1:Name}Props, ${1:Name}Component };",
+      ""
+    ]
+  },
+  "type-component": {
+    "prefix": "type-component",
+    "scope": "typescript",
+    "body": [
+      "import { FunctionComponent, PropsWithoutRef } from 'react';",
+      "",
+      "type ${1:Name}Props = PropsWithoutRef<{}>;",
+      "",
+      "type ${1:Name}Component = FunctionComponent<${1:Name}Props>;",
+      "",
+      "export { ${1:Name}Props, ${1:Name}Component };",
+      ""
+    ]
+  }
+}

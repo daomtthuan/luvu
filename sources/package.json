@@ -4,27 +4,45 @@
   "version": "1.0.0",
   "description": "App for my little love",
   "author": "Daomtthuan <daomtthuan@gmail.com> (https://github.com/daomtthuan)",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
-    "start": "expo start"
+    "start": "expo start --android",
+    "update": "expo upgrade",
+    "build": "eas build --platform android",
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ]
   },
   "dependencies": {
+    "@react-navigation/drawer": "^6.1.8",
+    "@react-navigation/native": "^6.0.6",
     "expo": "~44.0.0",
     "expo-status-bar": "~1.2.0",
+    "jest": "^26.6.3",
+    "jest-expo": "^44.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
+    "react-native-gesture-handler": "~2.1.0",
+    "react-native-reanimated": "~2.3.1",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-screens": "~3.10.1",
     "react-native-web": "0.17.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
+    "react-test-renderer": "^17.0.2",
     "typescript": "~4.3.5"
   },
-  "homepage": "",
-  "repository": "",
-  "readme": "",
+  "homepage": "https://daomtthuan.github.io/luvu/",
+  "repository": "https://github.com/daomtthuan/luvu.git",
+  "readme": "https://github.com/daomtthuan/luvu/blob/master/README.md",
   "bugs": {
     "email": "daomtthuan@gmail.com",
     "url": "https://github.com/daomtthuan/luvu/issues"
@@ -34,7 +52,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": ""
+      "url": "https://github.com/daomtthuan/luvu/blob/master/LICENSE"
     }
   ],
   "contributors": [
@@ -44,5 +62,9 @@
       "url": "https://github.com/daomtthuan"
     }
   ],
-  "keywords": []
+  "keywords": [
+    "daomtthuan",
+    "luvu",
+    "love"
+  ]
 }
