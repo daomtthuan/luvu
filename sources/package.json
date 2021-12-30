@@ -1,29 +1,23 @@
 {
   "name": "luvu",
   "displayName": "Luvu",
+  "packageName": "com.daomtthuan.luvu",
   "version": "1.0.0",
   "description": "App for my little love",
   "author": "Daomtthuan <daomtthuan@gmail.com> (https://github.com/daomtthuan)",
   "main": "./index.js",
   "scripts": {
-    "start": "expo start --android",
+    "start": "expo start --android --clear",
     "update": "expo upgrade",
     "build": "eas build --platform android",
-    "test": "jest"
-  },
-  "jest": {
-    "preset": "jest-expo",
-    "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
-    ]
+    "test": "jest",
+    "commands": "ts-node ./commands"
   },
   "dependencies": {
     "@react-navigation/drawer": "^6.1.8",
     "@react-navigation/native": "^6.0.6",
     "expo": "~44.0.0",
     "expo-status-bar": "~1.2.0",
-    "jest": "^26.6.3",
-    "jest-expo": "^44.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
@@ -35,9 +29,15 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@types/inquirer": "^8.1.3",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "inquirer": "^8.2.0",
+    "jest": "^26.6.3",
+    "jest-expo": "^44.0.0",
     "react-test-renderer": "^17.0.2",
+    "ts-node": "^10.4.0",
     "typescript": "~4.3.5"
   },
   "homepage": "https://daomtthuan.github.io/luvu/",

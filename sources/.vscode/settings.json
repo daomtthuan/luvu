@@ -5,5 +5,19 @@
   "prettier.printWidth": 120,
   "i18n-ally.annotationMaxLength": 120,
   "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 120,
-  "cSpell.words": ["daomtthuan", "luvu"]
+  "cSpell.words": ["daomtthuan", "luvu"],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.*": true,
+    "**/node_modules": true,
+    "**/yarn.lock": true,
+    "**/babel.config.js": true,
+    "**/jest.config.js": true
+  },
+  "explorerExclude.backup": null
 }
