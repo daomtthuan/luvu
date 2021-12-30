@@ -7,7 +7,7 @@ enum ComponentAction {
   back = 'Back',
 }
 
-const doComponentGroupAction = async function () {
+const doComponentGroupAction = async () => {
   const { action } = await Inquirer.prompt({
     type: 'list',
     name: 'action',

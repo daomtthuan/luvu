@@ -6,7 +6,7 @@ import { VStackComponent } from './VStack.type';
 
 const styles = VStackStyles;
 
-const VStack: VStackComponent = memo(function ({ space = 0, children, ...props }) {
+const VStack: VStackComponent = memo(({ space = 0, children, ...props }) => {
   const containerStyle = useMemo<ViewStyle>(
     () => ({
       paddingVertical: space ?? 0 / 2,

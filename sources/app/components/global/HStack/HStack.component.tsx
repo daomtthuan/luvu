@@ -6,7 +6,7 @@ import { HStackComponent } from './HStack.type';
 
 const styles = HStackStyles;
 
-const HStack: HStackComponent = memo(function ({ space = 0, children, ...props }) {
+const HStack: HStackComponent = memo(({ space = 0, children, ...props }) => {
   const containerStyle = useMemo<ViewStyle>(
     () => ({
       paddingHorizontal: space ?? 0 / 2,

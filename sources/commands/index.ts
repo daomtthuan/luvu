@@ -7,7 +7,7 @@ enum ActionGroup {
   exit = 'Exit',
 }
 
-(async function () {
+(async () => {
   let exit = false;
   while (!exit) {
     const { actionGroup } = await Inquirer.prompt({

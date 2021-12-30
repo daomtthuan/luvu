@@ -8,7 +8,7 @@ import { AppRootComponent } from './AppRoot.type';
 
 const styles = AppRootStyles;
 
-const AppRoot: AppRootComponent = memo(function () {
+const AppRoot: AppRootComponent = memo(() => {
   return (
     <HStack space={4} itemStyle={{ backgroundColor: 'red' }}>
       <VStack space={4} itemStyle={{ backgroundColor: 'red' }}>
