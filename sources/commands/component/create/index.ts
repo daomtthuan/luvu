@@ -1,14 +1,18 @@
-import { existsSync, mkdirSync, rmSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, rmSync } from 'fs';
 import Inquirer from 'inquirer';
 import { resolve } from 'path';
 
-import { createComponentFileData, createMemoComponentFileData } from './component';
-import { createExportFileData } from './export';
-import { createStyleFileData } from './style';
-import { createMemoTypeFileData, createTypeFileData } from './type';
+import { createDefaultComponentFile } from './component';
+import { createDefaultExportFile } from './export';
+import { createDefaultStyleFile } from './style';
+import { createDefaultTypeFile } from './type';
 
-const createComponent = async () => {
-  const { dir, fileName, name, isMemo } = await Inquirer.prompt([
+enum ComponentType {
+  default = 'Default',
+}
+
+export const createComponent = async () => {
+  const { dir, fileName, componentName, type } = await Inquirer.prompt([
     {
       type: 'input',
       name: 'dir',
@@ -21,14 +25,15 @@ const createComponent = async () => {
     },
     {
       type: 'input',
-      name: 'name',
+      name: 'componentName',
       message: 'Component name:',
     },
     {
-      type: 'confirm',
-      name: 'isMemo',
-      message: 'Is memo component?',
-      default: true,
+      type: 'list',
+      name: 'type',
+      message: 'Type component?',
+      choices: Object.values(ComponentType),
+      default: ComponentType.default,
     },
   ]);
 
@@ -51,19 +56,14 @@ const createComponent = async () => {
     }
     rmSync(componentDir, { recursive: true });
   }
-
   mkdirSync(componentDir);
 
-  writeFileSync(
-    resolve(componentDir, `${fileName}.component.tsx`),
-    isMemo ? createMemoComponentFileData(name, fileName) : createComponentFileData(name, fileName),
-  );
-  writeFileSync(
-    resolve(componentDir, `${fileName}.type.ts`),
-    isMemo ? createMemoTypeFileData(name) : createTypeFileData(name),
-  );
-  writeFileSync(resolve(componentDir, `${fileName}.style.ts`), createStyleFileData(name));
-  writeFileSync(resolve(componentDir, 'index.ts'), createExportFileData(fileName));
+  switch (type) {
+    case ComponentType.default:
+      createDefaultComponentFile(componentDir, fileName, componentName);
+      createDefaultStyleFile(componentDir, fileName, componentName);
+      createDefaultTypeFile(componentDir, fileName, componentName);
+      createDefaultExportFile(componentDir, fileName);
+      break;
+  }
 };
-
-export { createComponent };

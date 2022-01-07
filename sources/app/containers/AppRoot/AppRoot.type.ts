@@ -1,7 +1,5 @@
-import { ExoticComponent, PropsWithoutRef } from 'react';
+import { FunctionComponent, PropsWithoutRef } from 'react';
 
-type AppRootProps = PropsWithoutRef<{}>;
+export type AppRootProps = PropsWithoutRef<{}>;
 
-type AppRootComponent = ExoticComponent<AppRootProps>;
-
-export { AppRootProps, AppRootComponent };
+export type AppRootComponent = FunctionComponent<AppRootProps>;

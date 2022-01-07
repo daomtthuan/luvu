@@ -7,11 +7,11 @@ enum ComponentAction {
   back = 'Back',
 }
 
-const doComponentGroupAction = async () => {
+export const executeComponentGroupAction = async () => {
   const { action } = await Inquirer.prompt({
     type: 'list',
     name: 'action',
-    message: 'Which action do you want to do?',
+    message: 'Action?',
     choices: Object.values(ComponentAction),
     default: ComponentAction.back,
   });
@@ -25,5 +25,3 @@ const doComponentGroupAction = async () => {
       return;
   }
 };
-
-export { doComponentGroupAction };

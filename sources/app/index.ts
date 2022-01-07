@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 
 import { registerRootComponent } from 'expo';
-import { AppRoot } from '~containers/AppRoot';
+import { MemoAppRoot } from '~containers/AppRoot';
 
-registerRootComponent(AppRoot);
+registerRootComponent(MemoAppRoot);

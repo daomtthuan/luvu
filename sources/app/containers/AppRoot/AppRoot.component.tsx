@@ -1,33 +1,125 @@
 import { memo } from 'react';
-import { Text } from 'react-native';
-import { VStack } from '~components/global';
-import { HStack } from '~components/global/HStack';
+import { TableView } from '~components/global/View/Table';
 
-import { AppRootStyles } from './AppRoot.style';
 import { AppRootComponent } from './AppRoot.type';
 
-const styles = AppRootStyles;
-
-const AppRoot: AppRootComponent = memo(() => {
+export const AppRoot: AppRootComponent = function () {
   return (
-    <HStack space={4} itemStyle={{ backgroundColor: 'red' }}>
-      <VStack space={4} itemStyle={{ backgroundColor: 'red' }}>
-        <Text>Hello</Text>
-        <Text>Hello</Text>
-        <Text>Hello</Text>
-      </VStack>
-      <VStack space={4} itemStyle={{ backgroundColor: 'red' }}>
-        <Text>Hello</Text>
-        <Text>Hello</Text>
-        <Text>Hello</Text>
-      </VStack>
-      <VStack space={4} itemStyle={{ backgroundColor: 'red' }}>
-        <Text>Hello</Text>
-        <Text>Hello</Text>
-        <Text>Hello</Text>
-      </VStack>
-    </HStack>
+    <TableView
+      fields={[
+        {
+          name: 'id',
+          label: 'ID',
+        },
+        {
+          name: 'name',
+          label: 'Name',
+        },
+        {
+          name: 'value',
+          label: 'Value',
+        },
+      ]}
+      items={[
+        {
+          id: 0,
+          name: 'Nguyen Van An aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+          value: 2,
+        },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+        { id: 1, name: 'Man Nghi', value: 0 },
+        { id: 2, name: 'Luu Bich', value: 5 },
+        { id: 3, name: 'Nang Bi Chi', value: 6 },
+      ]}
+      space={2}
+    />
   );
-});
+};
 
-export { AppRoot };
+export const MemoAppRoot = memo(AppRoot);

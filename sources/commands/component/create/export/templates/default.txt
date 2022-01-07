@@ -1,0 +1,3 @@
+export * from './__FILE_NAME__.component';
+export * from './__FILE_NAME__.style';
+export * from './__FILE_NAME__.type';

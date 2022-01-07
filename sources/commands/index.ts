@@ -1,6 +1,6 @@
 import Inquirer from 'inquirer';
 
-import { doComponentGroupAction } from './component';
+import { executeComponentGroupAction } from './component';
 
 enum ActionGroup {
   component = 'Component',
@@ -8,19 +8,23 @@ enum ActionGroup {
 }
 
 (async () => {
+  console.log('Project commands helper');
+  console.log('------------------------------');
+
   let exit = false;
   while (!exit) {
     const { actionGroup } = await Inquirer.prompt({
       type: 'list',
       name: 'actionGroup',
-      message: 'Which action group do you want to do?',
+      message: 'Action group?',
       choices: Object.values(ActionGroup),
       default: ActionGroup.exit,
     });
+    console.log('------------------------------');
 
     switch (actionGroup) {
       case ActionGroup.component:
-        await doComponentGroupAction();
+        await executeComponentGroupAction();
         break;
 
       case ActionGroup.exit:

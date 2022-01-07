@@ -1,5 +1,13 @@
 import { StyleSheet } from 'react-native';
 
-const AppRootStyles = StyleSheet.create({});
-
-export { AppRootStyles };
+export const AppRootStyles = StyleSheet.create({
+  container: {
+    backgroundColor: 'red',
+  },
+  text: {
+    color: 'white',
+    fontSize: 36,
+    fontWeight: 'bold',
+    backgroundColor: 'black',
+  },
+});
