@@ -13,11 +13,11 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
-    "**/.*": true,
-    "**/node_modules": true,
-    "**/yarn.lock": true,
-    "**/babel.config.js": true,
-    "**/metro.config.js": true
+    "**/.*": false,
+    "**/node_modules": false,
+    "**/yarn.lock": false,
+    "**/babel.config.js": false,
+    "**/metro.config.js": false
   },
   "explorerExclude.backup": null,
   "exportall.config.folderListener": [

@@ -7,14 +7,15 @@
   "author": "Daomtthuan <daomtthuan@gmail.com> (https://github.com/daomtthuan)",
   "main": "./app/index.ts",
   "scripts": {
+    "sha": "cd android && gradlew signingReport",
     "clean": "cd android && gradlew clean",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "run": "react-native run-android",
     "start": "react-native start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "commands": "ts-node commands"
   },
   "dependencies": {
+    "@react-native-firebase/app": "^14.2.2",
     "@react-navigation/drawer": "^6.1.8",
     "@react-navigation/native": "^6.0.6",
     "@reduxjs/toolkit": "^1.7.1",
