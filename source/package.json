@@ -1,0 +1,78 @@
+{
+  "name": "luvu",
+  "displayName": "Luvu",
+  "packageName": "com.daomtthuan.luvu",
+  "version": "1.0.0",
+  "description": "App for my little love",
+  "author": "Daomtthuan <daomtthuan@gmail.com> (https://github.com/daomtthuan)",
+  "main": "./app/index.ts",
+  "scripts": {
+    "clean": "cd android && gradlew clean",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "commands": "ts-node commands"
+  },
+  "dependencies": {
+    "@react-navigation/drawer": "^6.1.8",
+    "@react-navigation/native": "^6.0.6",
+    "@reduxjs/toolkit": "^1.7.1",
+    "color": "^4.1.0",
+    "react": "^17.0.2",
+    "react-native": "^0.66.4",
+    "react-native-dynamic-font": "^1.0.8",
+    "react-native-gesture-handler": "^2.1.0",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-reanimated": "^2.3.1",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.10.1",
+    "react-redux": "^7.2.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^3.0.1",
+    "@types/color": "^3.0.2",
+    "@types/inquirer": "^8.1.3",
+    "@types/react": "^17.0.38",
+    "@types/react-native": "^0.66.4",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^8.6.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "inquirer": "^8.2.0",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "homepage": "https://daomtthuan.github.io/luvu/",
+  "repository": "https://github.com/daomtthuan/luvu.git",
+  "readme": "https://github.com/daomtthuan/luvu/blob/master/README.md",
+  "bugs": {
+    "email": "daomtthuan@gmail.com",
+    "url": "https://github.com/daomtthuan/luvu/issues"
+  },
+  "private": false,
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/daomtthuan/luvu/blob/master/LICENSE"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Daomtthuan",
+      "email": "daomtthuan@gmail.com",
+      "url": "https://github.com/daomtthuan"
+    }
+  ],
+  "keywords": [
+    "daomtthuan",
+    "luvu",
+    "love"
+  ]
+}
